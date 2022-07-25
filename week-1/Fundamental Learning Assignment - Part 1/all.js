@@ -1,0 +1,1 @@
+const nav_list = document.querySelector('.nav_bar');
