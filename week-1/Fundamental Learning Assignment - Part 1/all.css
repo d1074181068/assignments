@@ -55,7 +55,7 @@
     margin-bottom: 10px;
 }
 .content li{
-    width: 48%;
+    width: 45%;
     text-align: center;
     padding-top: 10px;
     padding-bottom:150px;
@@ -75,13 +75,7 @@
     cursor: pointer;
 }
 
-@media(max-width:1200px){
-    .content li{
-        width: 45%; 
-    }
-}
-
-@media(max-width:800px){
+@media(max-width:799px){
     .nav_bar{
         position:absolute;
         top: 48px;
@@ -94,7 +88,7 @@
         display: block;
     }
 }
-@media(max-width:500px){
+@media(max-width:499px){
     .section_title{
         font-size: 30px;
     }
