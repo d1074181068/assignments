@@ -21,7 +21,7 @@
     background-color: #B6B6B4;
 }
 
-.fa-bars{
+.humber_list{
     font-size: 30px;
     align-self: center;
     display: none;
@@ -62,14 +62,14 @@
     background-color:#6D7B8D ;
     margin: 10px;
 }
-.CallToAction{
+.action_btn{
     width: 150px;
     background-color:#C2DFFF ;
     padding: 16px 0px;
     text-align: center;
     border: none;
 }
-.CallToAction:hover{
+.action_btn:hover{
     outline:1px solid #C2DFFF;
     background-color: white;
     cursor: pointer;
