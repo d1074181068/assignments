@@ -44,3 +44,7 @@ table {
 *::before,*::after,*{
     box-sizing: border-box;
 }
+img{
+	vertical-align: bottom;
+	width: 100%;
+}
