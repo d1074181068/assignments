@@ -1,39 +1,41 @@
-function twoSum(nums,target){
-    let correct_num_array =[]
-    let match_num_index =[]
-    const array_index = nums.filter((item)=>{
-        if(item < target){
-            return item
-        }
-    })
-    array_index.sort()
-    array_index.forEach((item) => {
-        const minus_result = target - item
-        const match_num = array_index.find((item)=>{
-            return item === minus_result;
-        })
-        if(match_num != undefined){
-            const not_repeat = correct_num_array.every(item=>{
-                return match_num !== item[0].num1 && match_num!==item[1].num2
-            })
-            if(not_repeat){
-                const current_index = nums.findIndex(value=> value ===item)
-                const match_index = nums.findIndex(item=>item === match_num)
-                correct_num_array.push([{num1:item,index:current_index},{num2:match_num,index:match_index}])
-            }
-            // nums.forEach((item,index)=>{
-            //     if(item === match_num){
-            //         correct_num_array.push(index)
-            //     }
-            // })
-        }
-        
+function twoSum(nums, target) {
+  let correctNumArray = [];
+  let matchNumIndex = [];
+  const arrayIndex = nums.filter((item) => {
+    if (item < target) {
+      return item;
+    }
+  });
+  arrayIndex.sort();
+  arrayIndex.forEach((item) => {
+    const minusResult = target - item;
+    const matchNum = arrayIndex.find((item) => {
+      return item === minusResult;
     });
-    correct_num_array.forEach(item=>{
-        match_num_index.push([item[0].index,item[1].index])
-    })
-    
-    return match_num_index
+    if (matchNum != undefined) {
+      const notRepeat = correctNumArray.every((item) => {
+        return matchNum !== item[0].num1 && matchNum !== item[1].num2;
+      });
+      if (notRepeat) {
+        const currentIndex = nums.findIndex((value) => value === item);
+        const matchIndex = nums.findIndex((item) => item === matchNum);
+        correctNumArray.push([
+          { num1: item, index: currentIndex },
+          { num2: matchNum, index: matchIndex },
+        ]);
+      }
+      // nums.forEach((item,index)=>{
+      //     if(item === matchNum){
+      //         correctNumArray.push(index)
+      //     }
+      // })
+    }
+  });
+  correctNumArray.forEach((item) => {
+    matchNumIndex.push([item[0].index, item[1].index]);
+  });
+
+  return matchNumIndex;
 }
 
-console.log('asg4 :',twoSum([2,4,7,11,5,15],9));
+console.log("asg4 :", twoSum([2, 4, 7, 11, 5, 15], 9));
