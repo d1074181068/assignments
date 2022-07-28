@@ -36,4 +36,4 @@ function twoSum(nums,target){
     return match_num_index
 }
 
-console.log('asg4 :',twoSum([2,7,11,15],9));
+console.log('asg4 :',twoSum([2,4,7,11,5,15],9));
