@@ -1,6 +1,6 @@
 function practice_1(input) {
   const totalCount = input.reduce((acc, item) => {
-    if (acc[item] == null) {
+    if (!(item in acc)) {
       acc[item] = 1;
       return acc;
     }

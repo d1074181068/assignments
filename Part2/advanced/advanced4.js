@@ -1,7 +1,7 @@
 function practice_4(input) {
   const groupedFinal = input.reduce((acc, item) => {
     const itemKey = item.key;
-    if (acc[itemKey] == null) acc[itemKey] = 0;
+    if (!(itemKey in acc)) acc[itemKey] = 0;
     acc[itemKey] += item.value;
     return acc;
   }, {});
