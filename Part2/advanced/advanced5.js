@@ -12,7 +12,6 @@ function practice_5(students, student_objects) {
     const targetIndex = acc.findIndex(
       (target) => target.student_id === item.student_id
     );
-    console.log(item.student_id, targetIndex);
     if (targetIndex !== undefined) {
       acc[targetIndex].objects.push(item["Object"]);
     }
