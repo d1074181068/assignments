@@ -34,7 +34,7 @@ const student_objects = [
   { student_id: 3, Object: "phone" },
 ];
 
-console.log(practice_5(students, student_objects));
+console.log("advanced5 :", practice_5(students, student_objects));
 
 // expected output:
 // [
