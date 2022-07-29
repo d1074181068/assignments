@@ -1,11 +1,8 @@
 function max(numbers) {
   const maxNum = numbers.reduce((biggerNum, currentValue) => {
-    if (biggerNum > currentValue) {
-      return biggerNum;
-    } else {
-      return currentValue;
-    }
-  }, numbers[0]);
+    if (biggerNum > currentValue) return biggerNum;
+    return currentValue;
+  });
   return maxNum;
 }
 

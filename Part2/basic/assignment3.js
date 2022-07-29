@@ -1,12 +1,8 @@
 function calculate(data) {
-  let totalPrice = 0;
-  const afterDiscount = data.products.map((item) => {
-    return item.price * (1 - data.discount);
-  });
-  afterDiscount.forEach((item) => {
-    totalPrice += item;
-  });
-  return totalPrice;
+  const afterDiscount = data.products
+    .map((item) => item.price * (1 - data.discount))
+    .reduce((acc, item) => acc + item, 0);
+  return afterDiscount;
 }
 
 const discountedPrice = calculate({

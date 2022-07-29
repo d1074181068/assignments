@@ -5,18 +5,15 @@
  */
 
 function practice_5(students, student_objects) {
-  students.forEach((item) => {
-    item.objects = [];
-  });
-  student_objects.reduce((acc, item) => {
-    const targetIndex = acc.findIndex(
+  student_objects.forEach((item) => {
+    const targetIndex = students.findIndex(
       (target) => target.student_id === item.student_id
     );
-    if (targetIndex !== undefined) {
-      acc[targetIndex].objects.push(item["Object"]);
+    if (targetIndex !== undefined && !("objects" in students[targetIndex])) {
+      students[targetIndex].objects = [];
     }
-    return students;
-  }, students);
+    students[targetIndex].objects.push(item["Object"]);
+  });
   return students;
 }
 
