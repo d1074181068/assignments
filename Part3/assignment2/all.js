@@ -19,7 +19,7 @@ function render(data) {
   productList.innerHTML = htmlText;
 }
 
-ajax("https://appworks-school.github.io/Remote-Aassigiment-Data/products").then(
+ajax("https://appworks-school.github.io/Remote-Assignment-Data/products").then(
   (data) => render(data)
 );
 
