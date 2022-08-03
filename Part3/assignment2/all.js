@@ -1,12 +1,12 @@
-function ajax(url) {
+function ajax (url) {
   return fetch(url).then((response) => {
-    return response.json();
-  });
+    return response.json()
+  })
 }
 
-function render(data) {
-  let htmlText = "";
-  const productList = document.querySelector(".product_list > tbody");
+function render (data) {
+  let htmlText = ''
+  const productList = document.querySelector('.product_list > tbody')
   data.forEach((item) => {
     htmlText += `
     <tr>
@@ -14,14 +14,14 @@ function render(data) {
         <td>${item.price}</td>
         <td>${item.description}</td>
     </tr>
-  `;
-  });
-  productList.innerHTML = htmlText;
+  `
+  })
+  productList.innerHTML = htmlText
 }
 
-ajax("https://appworks-school.github.io/Remote-Assignment-Data/products").then(
+ajax('https://appworks-school.github.io/Remote-Assignment-Data/products').then(
   (data) => render(data)
-);
+)
 
 /**
  *
