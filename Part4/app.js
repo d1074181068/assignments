@@ -19,7 +19,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/getData', (req, res) => {
-  if (req.query.number !== '') {
+  console.log('test', typeof req.query.number)
+  if (req.query.number !== undefined && req.query.number !== '') {
     if (!isNaN(Number(req.query.number))) {
       const numArr = Array.from(
         { length: req.query.number },

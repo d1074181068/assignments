@@ -8,6 +8,7 @@ const getTotal = () => {
       return res.json()
     })
     .then((res) => {
+      console.log(res)
       if ('error' in res) {
         output.textContent = res.error
         input.value = ''
